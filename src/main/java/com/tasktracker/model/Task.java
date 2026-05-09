@@ -3,12 +3,6 @@ package com.tasktracker.model;
 import jakarta.persistence.*;
 import java.util.Date;
 
-public enum Priority {
-    LOW,
-    MEDIUM,
-    HIGH
-}
-
 @Entity
 public class Task {
 
