@@ -1,15 +1,15 @@
-# Build Commands
-./mvnw spring-boot:run
+# CLAUDE.md
 
-# Test
-./mvnw test
+## Build Commands
+- mvn clean install
+- mvn spring-boot:run
+- mvn test
 
-# Conventions
-- Use MVC pattern
-- REST API standard
-- DTO ашиглах (optional)
+## Conventions
+- Use REST APIs
+- Use service layer architecture
+- Use JUnit for tests
 
-# No-go zones
-- SQL injection
-- Hardcoded passwords
-- Business logic controller-д бичихгүй
+## No-Go Zones
+- Do not commit secrets
+- Do not hardcode passwords

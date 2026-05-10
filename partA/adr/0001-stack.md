@@ -1,13 +1,16 @@
-# ADR-001: Stack Selection
+# ADR-001 Stack Decision
 
 ## Context
-Task tracker систем хийх шаардлагатай.
+The project required a backend framework for task management.
 
 ## Decision
-Java Spring Boot + MySQL ашиглахаар шийдсэн.
+Spring Boot was selected.
 
 ## Consequences
-+ Strong structure
-+ Scalable
-- Development time их
-- Complexity өндөр
+Pros:
+- Strong architecture
+- Easy REST API development
+- Good testing support
+
+Cons:
+- More setup complexity

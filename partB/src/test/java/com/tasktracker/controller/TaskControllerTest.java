@@ -16,6 +16,8 @@ import java.util.List;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.eq;
 
 @WebMvcTest(TaskController.class)
 class TaskControllerTest {
@@ -43,7 +45,7 @@ class TaskControllerTest {
     @Test
     void createTask_shouldReturnCreatedTask() throws Exception {
         Task task = buildTask();
-        when(service.createTask(task)).thenReturn(task);
+        when(service.createTask(any(Task.class))).thenReturn(task);
 
         mockMvc.perform(post("/tasks")
                 .contentType(MediaType.APPLICATION_JSON)
@@ -66,7 +68,8 @@ class TaskControllerTest {
     void updateTask_shouldReturnUpdatedTask() throws Exception {
         Task task = buildTask();
         task.setTitle("Updated");
-        when(service.updateTask(1L, task)).thenReturn(task);
+
+        when(service.updateTask(eq(1L), any(Task.class))).thenReturn(task);
 
         mockMvc.perform(put("/tasks/1")
                 .contentType(MediaType.APPLICATION_JSON)
