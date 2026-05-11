@@ -10,7 +10,7 @@
 
 ## Ашигласан технологи
 
-- Java 23
+- Java 17
 - Spring Boot 3
 - Maven
 - H2 Database
